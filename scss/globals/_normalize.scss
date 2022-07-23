@@ -66,7 +66,7 @@ body {
 header {
   scroll-snap-align: start;
   scroll-snap-stop: always;
-  position: relative;
+  // position: relative;
   height: 100vh;
   width: 100%;
 }
@@ -78,7 +78,7 @@ section {
   width: 100%;
   min-height: 100vh;
   margin-block: 10%;
-  padding-block: 20% 10%;
+  padding-block: 15%;
   padding-inline: 10%;
   object-fit: cover;
   background-attachment: fixed;
