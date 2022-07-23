@@ -1,0 +1,39 @@
+h1,
+h2,
+h3 {
+  margin-block: 0rem 1rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+h1 {
+  font-size: calc(3.5vw + 2rem);
+
+  // @media screen and (min-width: 425.02px) {
+  //   font-size: 3.5rem;
+  // }
+
+  // @media screen and (min-width: 768.02px) {
+  //   font-size: 5rem;
+  // }
+}
+
+p {
+  margin-block: 0rem 1rem;
+  line-height: 1.2;
+}
+
+a,
+a:visited,
+a:active,
+a:focus {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

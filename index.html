@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Poppins:wght@100;200;300;400;500;600;700;800&family=Tangerine:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    /> -->
+    <link rel="stylesheet" href="./dist/style.css" />
+    <script
+      src="https://kit.fontawesome.com/bd522b0ff4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- BEGINING OF SLIDER SECTION -->
+    <section id="featured-post">
+      <div id="slide-container">
+        <div id="slides">
+          <!--featured article goes here-->
+          <article class="featured__slide animated slide_one">
+            <!-- <a
+              class="caption__container fixed"
+              href="#"
+              title="Link to Sample Heading"
+            >
+              <div class="caption">
+                <h1>Sample &amp; Heading</h1>
+                <h2>Sample Caption</h2>
+              </div>
+            </a> -->
+
+            <div class="caption_container">
+              <div class="caption">
+                <h1 class="title">
+                  <a href="#">Borguette</a>
+                </h1>
+                <p class="subtitle">
+                  <span>Oakland Ave,</span>
+                  <span>Manhattan, New York.</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="indicator">
+              <sup class="current__item">01</sup>
+              <span class="slash">/</span>
+              <span>05</span>
+            </div>
+          </article>
+
+          <article class="featured__slide animated slide_two">
+            <!-- <a
+              class="caption__container fixed"
+              href="#"
+              title="Link to Sample Heading"
+            >
+              <div class="caption">
+                <h1>Sample &amp; Heading</h1>
+                <h2>Sample Caption</h2>
+              </div>
+            </a> -->
+
+            <div class="caption_container">
+              <div class="caption">
+                <h1 class="title">
+                  <a href="#">Louvrette</a>
+                </h1>
+                <p class="subtitle">
+                  <span>Angleton Street,</span>
+                  <span>Boulder City, Colorado.</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="indicator">
+              <sup class="current__item">02</sup>
+              <span class="slash">/</span>
+              <span>05</span>
+            </div>
+          </article>
+
+          <article class="featured__slide animated slide_three">
+            <!-- <a
+              class="caption__container fixed"
+              href="#"
+              title="Link to Sample Heading"
+            >
+              <div class="caption">
+                <h1>Sample &amp; Heading</h1>
+                <h2>Sample Caption</h2>
+              </div>
+            </a> -->
+
+            <div class="caption_container">
+              <div class="caption">
+                <h1 class="title">
+                  <a href="#">Cappadocia</a>
+                </h1>
+                <p class="subtitle">
+                  <span>Strait Ave,</span>
+                  <span>Miami, FLorida.</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="indicator">
+              <sup class="current__item">03</sup>
+              <span class="slash">/</span>
+              <span>05</span>
+            </div>
+          </article>
+
+          <article class="featured__slide animated slide_four">
+            <!-- <a
+              class="caption__container fixed"
+              href="#"
+              title="Link to Sample Heading"
+            >
+              <div class="caption">
+                <h1>Sample &amp; Heading</h1>
+                <h2>Sample Caption</h2>
+              </div>
+            </a> -->
+
+            <div class="caption_container">
+              <div class="caption">
+                <h1 class="title">
+                  <a href="#">Farenhait</a>
+                </h1>
+                <p class="subtitle">
+                  <span>Lost Boulevard,</span>
+                  <span>Los Angles, California.</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="indicator">
+              <sup class="current__item">04</sup>
+              <span class="slash">/</span>
+              <span>05</span>
+            </div>
+          </article>
+
+          <article class="featured__slide animated slide_five">
+            <!-- <a
+              class="caption__container fixed"
+              href="#"
+              title="Link to Sample Heading"
+            >
+              <div class="caption">
+                <h1>Sample &amp; Heading</h1>
+                <h2>Sample Caption</h2>
+              </div>
+            </a> -->
+
+            <div class="caption_container">
+              <div class="caption">
+                <h1 class="title">
+                  <a href="#">Casa D'Leit</a>
+                </h1>
+                <p class="subtitle">
+                  <span>Haus Crescent,</span>
+                  <span>Houston, Texas.</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="indicator">
+              <sup class="current__item">05</sup>
+              <span class="slash">/</span>
+              <span>05</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- BEGINING OF SLIDER CONTROLS -->
+        <div class="controls">
+          <!-- BEGINING OF SLIDER CONTROL -->
+          <div class="slider__controls">
+            <button class="control__btn prev">
+              <i class="fa-solid fa-arrow-up-long"></i>
+            </button>
+            <button class="control__btn next">
+              <i class="fa-solid fa-arrow-down-long"></i>
+            </button>
+          </div>
+          <!-- END OF SLIDER CONTROL -->
+
+          <!-- BEGINING OF SLIDER DOT INDICATORS -->
+          <ul id="dots__container">
+            <li class="dot"></li>
+            <li class="dot"></li>
+            <li class="dot"></li>
+            <li class="dot"></li>
+            <li class="dot"></li>
+          </ul>
+          <!-- END OF SLIDER DOT INDICATORS -->
+        </div>
+        <!-- BEGINING OF SLIDER CONTROLS -->
+      </div>
+    </section>
+    <!-- END OF SLIDER SECTION -->
+
+    <section id="second">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit
+        alias ex officia cum sit doloremque exercitationem earum maiores
+        voluptates. Eveniet aperiam enim fugit, molestias ad fugiat asperiores
+        dolorum, exercitationem architecto quia nesciunt commodi deleniti error
+        eos modi esse maiores veniam molestiae laudantium consequuntur sunt in?
+        Recusandae unde odio iusto quibusdam, explicabo dolor in quas, corrupti
+        fugit laudantium doloribus fuga qui neque autem nemo provident? In
+        consequatur cupiditate ex sed veniam? Dolore et unde deleniti facilis,
+        voluptate asperiores ut fuga eum enim deserunt magnam, totam, at
+        consequatur esse odit sint porro optio magni! Quos obcaecati quo libero
+        fugit saepe inventore sed esse. Eveniet voluptates temporibus velit, ab
+        perferendis rerum ipsum ratione quae inventore sapiente minima
+        voluptatem deleniti iure alias, nemo fugit est. Necessitatibus
+        voluptatum temporibus nihil quibusdam mollitia ipsum minima, architecto
+        animi praesentium tempora quasi quam ullam dicta vel cupiditate
+        voluptate aliquam? Deserunt quae quod voluptates mollitia blanditiis?
+        Doloribus odio dicta maiores explicabo laudantium deserunt alias ipsam
+        commodi magni qui praesentium at fugit animi dignissimos, laborum atque!
+        Porro, adipisci sequi. Tempore quae ipsum inventore qui nostrum earum
+        magnam porro tempora laborum blanditiis officiis, ex cum. Neque officiis
+        numquam rerum! Dolorum quod, qui praesentium dolore totam natus ad, cum
+        ipsa quisquam illum harum nobis saepe, fugit eligendi sapiente maiores
+        laborum libero omnis commodi inventore sit! Porro voluptatum et ipsam
+        illo quas dolorem numquam excepturi beatae autem reiciendis repellat
+        iusto ab iste cumque dignissimos, sunt animi nemo omnis eum minus
+        dolorum recusandae? Numquam autem, fugit deleniti totam recusandae
+        doloremque eos illo iste facere, dolorum aliquam. Ab quidem ad neque!
+        Dolor perspiciatis aperiam voluptate eveniet illum ducimus, accusantium
+        dolore nam a molestias rem esse dolorum suscipit rerum voluptates.
+        Dolorem, aliquid cupiditate. Voluptatibus unde vitae recusandae
+        molestiae dignissimos, tempora soluta, reprehenderit aspernatur eveniet
+        doloribus voluptates obcaecati pariatur autem, repellendus esse
+        doloremque iusto? Commodi, amet.
+      </p>
+    </section>
+
+    <section id="third">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit
+        alias ex officia cum sit doloremque exercitationem earum maiores
+        voluptates. Eveniet aperiam enim fugit, molestias ad fugiat asperiores
+        dolorum, exercitationem architecto quia nesciunt commodi deleniti error
+        eos modi esse maiores veniam molestiae laudantium consequuntur sunt in?
+        Recusandae unde odio iusto quibusdam, explicabo dolor in quas, corrupti
+        fugit laudantium doloribus fuga qui neque autem nemo provident? In
+        consequatur cupiditate ex sed veniam? Dolore et unde deleniti facilis,
+        voluptate asperiores ut fuga eum enim deserunt magnam, totam, at
+        consequatur esse odit sint porro optio magni! Quos obcaecati quo libero
+        fugit saepe inventore sed esse. Eveniet voluptates temporibus velit, ab
+        perferendis rerum ipsum ratione quae inventore sapiente minima
+        voluptatem deleniti iure alias, nemo fugit est. Necessitatibus
+        voluptatum temporibus nihil quibusdam mollitia ipsum minima, architecto
+        animi praesentium tempora quasi quam ullam dicta vel cupiditate
+        voluptate aliquam? Deserunt quae quod voluptates mollitia blanditiis?
+        Doloribus odio dicta maiores explicabo laudantium deserunt alias ipsam
+        commodi magni qui praesentium at fugit animi dignissimos, laborum atque!
+        Porro, adipisci sequi. Tempore quae ipsum inventore qui nostrum earum
+        magnam porro tempora laborum blanditiis officiis, ex cum. Neque officiis
+        numquam rerum! Dolorum quod, qui praesentium dolore totam natus ad, cum
+        ipsa quisquam illum harum nobis saepe, fugit eligendi sapiente maiores
+        laborum libero omnis commodi inventore sit! Porro voluptatum et ipsam
+        illo quas dolorem numquam excepturi beatae autem reiciendis repellat
+        iusto ab iste cumque dignissimos, sunt animi nemo omnis eum minus
+        dolorum recusandae? Numquam autem, fugit deleniti totam recusandae
+        doloremque eos illo iste facere, dolorum aliquam. Ab quidem ad neque!
+        Dolor perspiciatis aperiam voluptate eveniet illum ducimus, accusantium
+        dolore nam a molestias rem esse dolorum suscipit rerum voluptates.
+        Dolorem, aliquid cupiditate. Voluptatibus unde vitae recusandae
+        molestiae dignissimos, tempora soluta, reprehenderit aspernatur eveniet
+        doloribus voluptates obcaecati pariatur autem, repellendus esse
+        doloremque iusto? Commodi, amet.
+      </p>
+    </section>
+
+    <section id="fourth">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae impedit
+        alias ex officia cum sit doloremque exercitationem earum maiores
+        voluptates. Eveniet aperiam enim fugit, molestias ad fugiat asperiores
+        dolorum, exercitationem architecto quia nesciunt commodi deleniti error
+        eos modi esse maiores veniam molestiae laudantium consequuntur sunt in?
+        Recusandae unde odio iusto quibusdam, explicabo dolor in quas, corrupti
+        fugit laudantium doloribus fuga qui neque autem nemo provident? In
+        consequatur cupiditate ex sed veniam? Dolore et unde deleniti facilis,
+        voluptate asperiores ut fuga eum enim deserunt magnam, totam, at
+        consequatur esse odit sint porro optio magni! Quos obcaecati quo libero
+        fugit saepe inventore sed esse. Eveniet voluptates temporibus velit, ab
+        perferendis rerum ipsum ratione quae inventore sapiente minima
+        voluptatem deleniti iure alias, nemo fugit est. Necessitatibus
+        voluptatum temporibus nihil quibusdam mollitia ipsum minima, architecto
+        animi praesentium tempora quasi quam ullam dicta vel cupiditate
+        voluptate aliquam? Deserunt quae quod voluptates mollitia blanditiis?
+        Doloribus odio dicta maiores explicabo laudantium deserunt alias ipsam
+        commodi magni qui praesentium at fugit animi dignissimos, laborum atque!
+        Porro, adipisci sequi. Tempore quae ipsum inventore qui nostrum earum
+        magnam porro tempora laborum blanditiis officiis, ex cum. Neque officiis
+        numquam rerum! Dolorum quod, qui praesentium dolore totam natus ad, cum
+        ipsa quisquam illum harum nobis saepe, fugit eligendi sapiente maiores
+        laborum libero omnis commodi inventore sit! Porro voluptatum et ipsam
+        illo quas dolorem numquam excepturi beatae autem reiciendis repellat
+        iusto ab iste cumque dignissimos, sunt animi nemo omnis eum minus
+        dolorum recusandae? Numquam autem, fugit deleniti totam recusandae
+        doloremque eos illo iste facere, dolorum aliquam. Ab quidem ad neque!
+        Dolor perspiciatis aperiam voluptate eveniet illum ducimus, accusantium
+        dolore nam a molestias rem esse dolorum suscipit rerum voluptates.
+        Dolorem, aliquid cupiditate. Voluptatibus unde vitae recusandae
+        molestiae dignissimos, tempora soluta, reprehenderit aspernatur eveniet
+        doloribus voluptates obcaecati pariatur autem, repellendus esse
+        doloremque iusto? Commodi, amet.
+      </p>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
