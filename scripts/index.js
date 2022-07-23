@@ -1,10 +1,21 @@
+// function checkWidth() {
+//   $vWidth = $(window).width()
+
+//   //Check condition for screen width
+//   if ($vWidth < 768.02) {
+//     $('.nav__links').hide()
+
+//     $('.hamburger').click(function () {
+//       $(this).toggleClass('open')
+//       $('#nav__bar').toggleClass('blurBg')
+//       $('.nav__links').toggleClass('open')
+//       $('.nav__control').fadeIn(500).toggleClass('open')
+//       $('.nav__links').slideToggle(500)
+//     })
+//   }
 function checkWidth() {
-  $vWidth = $(window).width()
-
-  //Check condition for screen width
-  if ($vWidth < 768.02) {
+  if ($(window).width() < 768.02) {
     $('.nav__links').hide()
-
     $('.hamburger').click(function () {
       $(this).toggleClass('open')
       $('#nav__bar').toggleClass('blurBg')
@@ -15,6 +26,10 @@ function checkWidth() {
   } else {
     $('.nav__links').show()
   }
+  // }
+  // else {
+  //   $('.nav__links').show()
+  // }
 }
 
 $(document).ready(function () {
@@ -164,9 +179,13 @@ let count = -1
 let slides = jQuery.makeArray($('#slides article')), //base 0
   totalSlides = slides.length - 1
 let startPos = { top: '100%', 'z-index': '0' },
-  endPos = { top: '0px', 'z-index': '2' },
+  endPos = { top: '0px', 'z-index': '1' },
   prevPos = { top: '-100%', 'z-index': '0' },
-  transit = { transition: 'top 800ms ease 0s', 'transition-delay': '0s' },
+  transit = {
+    transition: 'top 1s ease-in 0s',
+    // transition: 'top 800ms ease-in 0s',
+    'transition-delay': '0s',
+  },
   nonetrans = { transition: 'none' },
   timer = null
 
@@ -225,7 +244,8 @@ function clickDots() {
     }
     selectDots()
     clearTimeout(timer)
-    timer = setTimeout(playSlides, 7500)
+    timer = setTimeout(playSlides, 9000)
+    // timer = setTimeout(playSlides, 7500)
     unbindBtn()
   })
 }
@@ -237,7 +257,8 @@ function upDown() {
     advance()
     selectDots()
     clearTimeout(timer)
-    timer = setTimeout(playSlides, 7500)
+    timer = setTimeout(playSlides, 9000)
+    // timer = setTimeout(playSlides, 7500)
     unbindBtn()
   })
 
@@ -250,15 +271,18 @@ function upDown() {
 
     selectDots()
     clearTimeout(timer)
-    timer = setTimeout(playSlides, 7500)
+    timer = setTimeout(playSlides, 9000)
+    // timer = setTimeout(playSlides, 7500)
     unbindBtn()
   })
 }
 
 function unbindBtn() {
   $('.next,.prev,.dot').unbind('click')
-  setTimeout(upDown, 800)
-  setTimeout(clickDots, 800)
+  setTimeout(upDown, 1000)
+  setTimeout(clickDots, 1000)
+  // setTimeout(upDown, 800)
+  // setTimeout(clickDots, 800)
 }
 
 // Slideshow automatic slide function

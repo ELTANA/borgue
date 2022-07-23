@@ -214,6 +214,7 @@
         &.prev {
           transform: all 500ms ease-in;
           &:active {
+            color: colors.$orange;
             transform: translateY(-5%);
           }
         }
@@ -221,6 +222,7 @@
         &.next {
           transform: all 500ms ease-in;
           &:active {
+            color: colors.$orange;
             transform: translateY(5%);
           }
         }
