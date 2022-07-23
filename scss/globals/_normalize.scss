@@ -44,3 +44,50 @@ body {
   display: block;
   padding-block: 1rem;
 }
+
+.fullpage {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  overscroll-behavior-y: contain;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  height: 100vh;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; // IE and Edge
+  scrollbar-width: none; // Firefox
+  transition: all 1.5s ease-in;
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+header {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  margin-block: 10%;
+  padding-block: 20% 10%;
+  padding-inline: 10%;
+  object-fit: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 500ms ease-in;
+}

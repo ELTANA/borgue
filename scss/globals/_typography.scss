@@ -1,3 +1,5 @@
+@use '../globals/colors';
+
 h1,
 h2,
 h3 {
@@ -8,22 +10,12 @@ h3 {
 
 h1 {
   font-size: calc(3.5vw + 2rem);
-
-  // @media screen and (min-width: 425.02px) {
-  //   font-size: 3.5rem;
-  // }
-
-  // @media screen and (min-width: 768.02px) {
-  //   font-size: 5rem;
-  // }
 }
 
 p {
   margin-block: 0rem 1rem;
   line-height: 1.2;
   letter-spacing: 1px;
-  // font-size: 1.2rem;
-  // font-weight: 300;
 }
 
 a,
@@ -39,4 +31,12 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+.clip__text {
+  color: colors.$linear-orange;
+  background-image: colors.$linear-orange;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
