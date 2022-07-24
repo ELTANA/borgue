@@ -1,35 +1,16 @@
-// function checkWidth() {
-//   $vWidth = $(window).width()
-
-//   //Check condition for screen width
-//   if ($vWidth < 768.02) {
-//     $('.nav__links').hide()
-
-//     $('.hamburger').click(function () {
-//       $(this).toggleClass('open')
-//       $('#nav__bar').toggleClass('blurBg')
-//       $('.nav__links').toggleClass('open')
-//       $('.nav__control').fadeIn(500).toggleClass('open')
-//       $('.nav__links').slideToggle(500)
-//     })
-//   }
 function checkWidth() {
   if ($(window).width() < 768.02) {
     $('.nav__links').hide()
     $('.hamburger').click(function () {
-      $(this).toggleClass('open')
+      $('.hamburger').toggleClass('open')
       $('#nav__bar').toggleClass('blurBg')
       $('.nav__links').toggleClass('open')
-      $('.nav__control').fadeIn(500).toggleClass('open')
+      $('.nav__control').toggleClass('open')
       $('.nav__links').slideToggle(500)
     })
-  } else {
+  } else if ($(window).width() >= 768.02) {
     $('.nav__links').show()
   }
-  // }
-  // else {
-  //   $('.nav__links').show()
-  // }
 }
 
 $(document).ready(function () {
@@ -37,129 +18,75 @@ $(document).ready(function () {
 })
 $(window).on('resize', function () {
   checkWidth()
+  location.reload()
 })
 
-// $(window).scroll(function () {
-//   var height = $(window).scrollTop()
-//   console.log(height)
-//   if (height > 0) {
-//     $('#nav__bar').toggleClass('scrollBg')
-//   }
-// })
+// A FUNCTION TO GET ELEMENT BY CLASSNAME
+function selectElementByClass(className) {
+  return document.querySelector(`.${className}`)
+}
 
-// $(document).ready(function () {
-//   if ($(window).width() < 768.02) {
-//     $('.nav__links').hide()
-
-//     $('.hamburger').click(function () {
-//       $(this).toggleClass('open')
-//       $('#nav__bar').toggleClass('blurBg')
-//       $('.nav__links').toggleClass('open')
-//       $('.nav__control').fadeIn(500).toggleClass('open')
-//       $('.nav__links').slideToggle(500)
-//     })
-//   } else {
-//     $('.nav__links').show()
-//   }
-// })
-
-// // A FUNCTION TO GET ELEMENT BY CLASSNAME
-// function selectElementByClass(className) {
-//   return document.querySelector(`.${className}`)
-// }
-
-// // BEGINING OF NAVBAR HAMBURGER MENU
+// BEGINING OF NAVBAR HAMBURGER MENU
 // const overlayContent = selectElementByClass('overlay')
 // const hamburger = selectElementByClass('hamburger')
 // const navBar = selectElementByClass('nav__bar')
 // const navBrand = selectElementByClass('nav__brand')
 // const navLinks = selectElementByClass('nav__links')
-// const homeNavItem = selectElementByClass('homeNavItem')
-// const servicesNavItem = selectElementByClass('servicesNavItem')
-// const contactNavItem = selectElementByClass('contactNavItem')
-// const servicesPage = selectElementByClass('services')
-// const navLinkItem = document.querySelectorAll('.nav__links .link__item')
-
-// // ADD EVENT LISTENER TO HAMBURGER BUTTON & LIST ITEMS
-// hamburger.addEventListener('click', openMenu)
-// homeNavItem.addEventListener('click', closeMenu)
-// servicesNavItem.addEventListener('click', closeMenu)
-// contactNavItem.addEventListener('click', closeMenu)
-
-// // DISCLAIMER PAGE
-// const disclaimerPage = selectElementByClass('disclaimer')
-// const showPage = () => {
-//   if (window.localStorage.getItem('vincentpryce') === 'Yes') {
-//     disclaimerPage.classList.add('display-none')
-//   }
-// }
-
-// // REDIRECT TO GOOGLE
-// const redirectPage = () => {
-//   window.location.replace('https://google.com/')
-// }
-
-// // ADD OPEN CLASS TO BRING NAV LINKS INTO VIEWPORT
-// function openMenu() {
-//   navLinks.classList.toggle('open')
-//   // ADD DARKER BACKGROUND TO THE NAV BRANDS & NAV LIST ITEMS
-//   navBrand.classList.toggle('open')
-//   overlayContent.classList.toggle('open')
-// }
-
-// // REMOVE OPEN CLASS TO CLOSE NAV LINKS MENU
-// function closeMenu() {
-//   navLinks.classList.remove('open')
-//   // REMOVE DARK BACKGROUND ON THE NAV BRANDS & NAV LIST ITEMS
-//   navBrand.classList.remove('open')
-//   overlayContent.classList.remove('open')
-// }
-// // END OF NAVBAR HAMBURGER MENU
+const homeNavItem = selectElementByClass('homeNavItem')
+const servicesNavItem = selectElementByClass('servicesNavItem')
+const aboutNavItem = selectElementByClass('aboutNavItem')
+const contactNavItem = selectElementByClass('contactNavItem')
+const servicesPage = selectElementByClass('services')
+const navLinkItem = document.querySelectorAll('.nav__links .link__item')
 
 // // BEGINING OF NAVBAR INTERSECTION OBSERVER
-// const sections = [
-//   selectElementByClass('home'),
-//   selectElementByClass('services'),
-//   selectElementByClass('contact'),
-// ]
+const sections = [
+  selectElementByClass('home'),
+  selectElementByClass('about'),
+  selectElementByClass('services'),
+  selectElementByClass('contact'),
+]
 
-// const navItems = {
-//   home: selectElementByClass('homeNavItem'),
-//   services: selectElementByClass('servicesNavItem'),
-//   contact: selectElementByClass('contactNavItem'),
-// }
+const navItems = {
+  home: selectElementByClass('homeNavItem'),
+  about: selectElementByClass('aboutNavItem'),
+  services: selectElementByClass('servicesNavItem'),
+  contact: selectElementByClass('contactNavItem'),
+}
+// console.log(navItems)
+// intersection observer setup
+const observerOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.1,
+}
 
-// // intersection observer setup
-// const observerOptions = {
-//   root: null,
-//   rootMargin: '0px',
-//   threshold: 0.7,
-// }
+function observerCallback(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // get the nav item corresponding to the id of the section
+      // that is currently in view
+      // console.log(navItems)
+      console.log(entry.target.id)
+      const navItem = navItems[entry.target.id]
+      // console.log(navItem)
+      // add 'active' class on the navItem
+      navItem.classList.add('active')
 
-// function observerCallback(entries, observer) {
-//   entries.forEach(entry => {
-//     if (entry.isIntersecting) {
-//       // get the nav item corresponding to the id of the section
-//       // that is currently in view
-//       const navItem = navItems[entry.target.id]
-//       // console.log(navItem)
-//       // add 'active' class on the navItem
-//       navItem.classList.add('active')
+      // remove 'active' class from any navItem that is not
+      // same as 'navItem' defined above
+      Object.values(navItems).forEach(item => {
+        if (item != navItem) {
+          item.classList.remove('active')
+        }
+      })
+    }
+  })
+}
 
-//       // remove 'active' class from any navItem that is not
-//       // same as 'navItem' defined above
-//       Object.values(navItems).forEach(item => {
-//         if (item != navItem) {
-//           item.classList.remove('active')
-//         }
-//       })
-//     }
-//   })
-// }
+const observer = new IntersectionObserver(observerCallback, observerOptions)
 
-// const observer = new IntersectionObserver(observerCallback, observerOptions)
-
-// sections.forEach(sec => observer.observe(sec))
+sections.forEach(sec => observer.observe(sec))
 
 // // ADD DARK BACKGROUND COLOR TO NAVBAR WHEN CONTACT PAGE IS IN VIEW
 // window.addEventListener('wheel', () => {
@@ -172,7 +99,7 @@ $(window).on('resize', function () {
 //     navBar.classList.remove('open')
 //   }
 // })
-// // END OF NAVBAR INTERSECTION OBSERVER
+// END OF NAVBAR INTERSECTION OBSERVER
 
 // BEGINING OF SLIDER
 let count = -1
