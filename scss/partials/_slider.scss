@@ -17,7 +17,6 @@
       height: 100%;
       position: absolute;
       display: block;
-      // z-index: 0;
 
       &.animated {
         animation: ease-in 1.5s both 300ms infinite both forwards;
@@ -26,11 +25,9 @@
       .caption_container {
         width: 100%;
         height: 100%;
-        // padding: 2%;
         position: relative;
         top: 0;
         left: 0;
-        // z-index: 0;
         background-color: colors.$blue-alt;
 
         .caption {
@@ -95,7 +92,7 @@
         background-repeat: no-repeat;
         background-attachment: fixed;
 
-        @media screen and (min-width: 767px) {
+        @media screen and (min-width: 767.98px) {
           background-image: url('../../assets/images/slider_img_1.jpg');
         }
       }
@@ -106,7 +103,7 @@
         background-repeat: no-repeat;
         background-attachment: fixed;
 
-        @media screen and (min-width: 767px) {
+        @media screen and (min-width: 767.98px) {
           background-image: url('../../assets/images/slider_img_2.png');
         }
       }
@@ -117,7 +114,7 @@
         background-repeat: no-repeat;
         background-attachment: fixed;
 
-        @media screen and (min-width: 767px) {
+        @media screen and (min-width: 767.98px) {
           background-image: url('../../assets/images/slider_img_3.jpg');
         }
       }
@@ -128,7 +125,7 @@
         background-repeat: no-repeat;
         background-attachment: fixed;
 
-        @media screen and (min-width: 767px) {
+        @media screen and (min-width: 767.98px) {
           background-image: url('../../assets/images/slider_img_4.jpg');
         }
       }
@@ -139,7 +136,7 @@
         background-repeat: no-repeat;
         background-attachment: fixed;
 
-        @media screen and (min-width: 767px) {
+        @media screen and (min-width: 767.98px) {
           background-image: url('../../assets/images/slider_img_5.jpg');
         }
       }
@@ -161,12 +158,12 @@
       }
 
       .current__item {
-        font-size: calc(3vw + 3.5rem);
+        font-size: calc(2vw + 2.5rem);
         color: colors.$orange;
       }
 
       .slash {
-        font-size: calc(2vw + 2.5rem);
+        font-size: calc(2vw + 2rem);
       }
     }
   }

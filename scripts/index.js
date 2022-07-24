@@ -7,6 +7,15 @@ function checkWidth() {
       $('.nav__links').toggleClass('open')
       $('.nav__control').toggleClass('open')
       $('.nav__links').slideToggle(500)
+
+      // CLOSE NABBAR ON CLICK
+      $('.link__item').on('click', function () {
+        $('.hamburger').removeClass('open')
+        $('#nav__bar').removeClass('blurBg')
+        $('.nav__links').removeClass('open')
+        $('.nav__control').removeClass('open')
+        $('.nav__links').slideUp(500)
+      })
     })
   } else if ($(window).width() >= 768.02) {
     $('.nav__links').show()
@@ -27,11 +36,6 @@ function selectElementByClass(className) {
 }
 
 // BEGINING OF NAVBAR HAMBURGER MENU
-// const overlayContent = selectElementByClass('overlay')
-// const hamburger = selectElementByClass('hamburger')
-// const navBar = selectElementByClass('nav__bar')
-// const navBrand = selectElementByClass('nav__brand')
-// const navLinks = selectElementByClass('nav__links')
 const homeNavItem = selectElementByClass('homeNavItem')
 const servicesNavItem = selectElementByClass('servicesNavItem')
 const aboutNavItem = selectElementByClass('aboutNavItem')
@@ -67,7 +71,7 @@ function observerCallback(entries, observer) {
       // get the nav item corresponding to the id of the section
       // that is currently in view
       // console.log(navItems)
-      console.log(entry.target.id)
+      // console.log(entry.target.id)
       const navItem = navItems[entry.target.id]
       // console.log(navItem)
       // add 'active' class on the navItem
