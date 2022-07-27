@@ -223,7 +223,7 @@ function playSlides() {
   function loop() {
     advance()
     selectDots()
-    timer = setTimeout(loop, 5000)
+    timer = setTimeout(loop, 7000)
     unbindBtn()
   }
   loop()
@@ -231,6 +231,16 @@ function playSlides() {
 
 $(document).ready(function () {
   playSlides()
+  $('.subtitle').hide()
+})
+
+// TOGGLE SHOW CAPTION LINK ON HOVER
+$('.caption').on('mouseenter', function () {
+  $('.subtitle').slideToggle(500)
+})
+
+$('.caption').on('mouseleave', function () {
+  $('.subtitle').slideToggle(500)
 })
 // END OF SLIDER
 

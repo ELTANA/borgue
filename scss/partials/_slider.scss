@@ -63,6 +63,8 @@
           }
 
           .title {
+            cursor: pointer;
+            user-select: none;
             padding-inline: 2rem;
             border-radius: inherit;
             background: colors.$blue-mint;
@@ -73,13 +75,39 @@
           }
 
           .subtitle {
+            cursor: pointer;
             margin-block-end: 1.2rem;
             color: colors.$light;
-            font-family: 'Tangerine', cursive;
-            font-size: 1.8rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1.2rem;
+            // font-family: 'Tangerine', cursive;
+            // font-size: 1.8rem;
 
-            span {
-              display: block;
+            // span {
+            //   display: block;
+
+            // }
+
+            .view__project {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 2rem;
+              transition: all 500ms ease-in;
+
+              &:hover {
+                color: colors.$orange;
+
+                .fa-hand-point-right {
+                  transform: translateX(100%);
+                }
+              }
+
+              .fa-hand-point-right {
+                color: colors.$orange-alt;
+                transition: all 500ms ease-in;
+              }
             }
           }
         }
